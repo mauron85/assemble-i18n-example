@@ -1,0 +1,59 @@
+{
+  "name": "assemble-i18n-example",
+  "description": "Example of using i18n within assemble.io",
+  "version": "0.1.0",
+  "homepage": "https://github.com/mauron85/assemble-i18n-example",
+  "author": {
+    "name": "",
+    "url": "http://github.com/mauron85/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/mauron85/assemble-i18n-example.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mauron85/assemble-i18n-example/issues"
+  },
+  "engines": {
+    "node": ">=0.10"
+  },
+  "scripts": {
+    "test": "grunt assemble"
+  },
+  "devDependencies": {
+    "assemble": "~0.4.41",
+    "assemble-contrib-permalinks": "^0.3.6",
+    "assemble-contrib-sitemap": "*",
+    "assemble-less": "^0.7.0",
+    "grunt": "~0.4.4",
+    "grunt-contrib-clean": "~0.5.0",
+    "grunt-contrib-compress": "^0.10.0",
+    "grunt-contrib-connect": "~0.8.0",
+    "grunt-contrib-copy": "^0.5.0",
+    "grunt-contrib-htmlmin": "^0.3.0",
+    "grunt-contrib-less": "^0.11.4",
+    "grunt-contrib-watch": "~0.6.1",
+    "grunt-newer": "^0.7.0",
+    "handlebars-helper-compose": "^0.2.12",
+    "helper-aggregate": "^0.1.2",
+    "load-grunt-tasks": "~0.6.0",
+    "time-grunt": "~0.3.2"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/mauron85/assemble-i18n-example/blob/master/LICENSE-MIT"
+    }
+  ],
+  "keywords": [
+    "assemble",
+    "templates",
+    "handlebars",
+    "site generator",
+    "site builder",
+    "grunt"
+  ],
+  "dependencies": {
+    "assemble-contrib-i18n": "^0.1.3"
+  }
+}

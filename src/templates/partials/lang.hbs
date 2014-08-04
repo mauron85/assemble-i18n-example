@@ -1,0 +1,31 @@
+<script>
+(function($, document, undefined){
+    var pageLang = document.documentElement.lang;
+    var userLang = $.cookie('lang') || pageLang;
+    if (userLang !== pageLang) {
+        var i18n = {
+            en: {
+                page_lang:  'non-english',
+                page_lang_sk: 'slovak',
+                switch_lang: 'You&rsquo;re viewing the \{{page_lang}} version of the page. Click to <a href="\{{url}}">view english version.</a>'
+            },
+            sk: {
+                page_lang:  'inom',
+                page_lang_en: 'anglickom',
+                switch_lang: 'Práve čítate verziu tejto stránky v \{{page_lang}} jazyku. <a href="\{{url}}">Zmeniť na slovenčinu.</a>'
+            }
+        };
+        var ui18n = i18n[userLang];
+        var strMap = {
+            '\{{url}}': location.pathname.replace(pageLang, userLang),
+            '\{{page_lang}}': ui18n['page_lang_' + pageLang] || ui18n['page_lang']
+        };
+        var message = ui18n['switch_lang'];
+        var re = new RegExp(Object.keys(strMap).join('|'), 'gi');
+        message = message.replace(re, function(matched){
+            return strMap[matched];
+        });
+        document.write('<div class="container"><div class="alert alert-danger alert-top" role="alert">' + message + '</div></div>');
+    }
+})(jQuery, document);
+</script>

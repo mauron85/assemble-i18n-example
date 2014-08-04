@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="{{language}}">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>{{i18n title}} | {{site.title}}</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css" rel="stylesheet">
+    <!-- if CDN fails
+    <link href="{{assets}}/css/bootstrap.min.css" rel="stylesheet">
+    -->
+
+    <!-- Custom CSS -->
+    <link href="{{assets}}/css/agency.css" rel="stylesheet">
+    <link href="{{assets}}/css/excuse.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="{{assets}}/font-awesome-4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href='http://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- jQuery  -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="{{assets}}/js/jquery.min.js">\x3C/script>')</script>
+    <script src="{{assets}}/js/jquery.cookie.js"></script>
+
+</head>
+
+<body id="page-top" class="index">
+
+    {{> navbar-agency }}
+
+    {{> lang }}
+
+    {{> body }}
+
+    {{> footer }}
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script>$.fn.modal || document.write('<script src="{{assets}}/js/bootstrap.min.js">\x3C/script>')</script>
+
+    <!-- Plugin JavaScript -->
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+    <script src="{{assets}}/js/classie.js"></script>
+    <script src="{{assets}}/js/cbpAnimatedHeader.js"></script>
+
+    <!-- Contact Form JavaScript -->
+    <script src="{{assets}}/js/jqBootstrapValidation.js"></script>
+    <script src="{{assets}}/js/contact_me.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="{{assets}}/js/agency.js"></script>
+
+    <noscript id="cookiesdirective-tpl" type="x-template">
+        <div class="alert altert-danger alert-dismissible cookiesdirective" role="alert">
+            <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">{{i18n "Close"}}</span></button>
+            {{{i18n "Using Cookies"}}}
+        </div>
+    </noscript>
+    <script>
+        if (!$.cookie('cookiesOk')) {
+            $('body').append($('#cookiesdirective-tpl').text())
+            $('.cookiesdirective button').click(function () {
+                $.cookie('cookiesOk', true, {path: '/'});
+            });
+        }
+    </script>
+
+</body>
+
+</html>

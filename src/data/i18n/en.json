@@ -1,0 +1,20 @@
+{
+    "intro-lead-in": "Welcome To Assemble example!",
+    "intro-heading-in": "with i18n support",
+    "about-subheading": "about-subheading",
+    "Home": "Home",
+    "About": "About",
+    "Blog": "Blog",
+    "Contact": "Contact",
+    "Explain": "How does it work",
+    "Login": "Sign in",
+    "intro": "This is a Assemble Generator template using <a href=\"http://getbootstrap.com\">Bootstrap</a>. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.",
+    "Last thing": "",
+    "Tell friends": "",
+    "PayAsYouGo": "Our pay as you go plans",
+    "BuyNow": "Buy Now!",
+    "top up": "top up",
+    "Close": "Close",
+    "Using Cookies": "This site uses cookies. By continuing to browse the site you are agreeing to our use of cookies. Read our <a href=\"privacy-policy.html\">privacy policy</a>.",
+    "Pricing": "Pricing"
+}
